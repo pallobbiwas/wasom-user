@@ -1,9 +1,10 @@
 import React from "react";
+import ReactModal from "../../ReactModal/ReactModal";
 import "./User.css";
 
 const User = (props) => {
   const { SetCounter }= props;
-  console.log(SetCounter);
+  // console.log(SetCounter);
   const { title, price, /* description, */ category, image, rating } = props.customer;
   const { rate, count } = rating;
   return (
@@ -19,7 +20,7 @@ const User = (props) => {
         {count}
         <span></span>
       </p>
-      <button>Details</button>
+      <ReactModal></ReactModal>
       <button onClick={SetCounter}>Order</button>
       
     </div>
