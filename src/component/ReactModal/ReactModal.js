@@ -41,5 +41,4 @@ const ReactModal = (props) => {
     </div>
   );
 };
-
 export default ReactModal;

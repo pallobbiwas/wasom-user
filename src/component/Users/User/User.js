@@ -5,12 +5,13 @@ import "./User.css";
 const User = (props) => {
   const { SetCounter } = props;
   // console.log(SetCounter);
-  const { title, price, category, image, rating } =
-    props.customer;
+  const { title, price, category, image, rating } = props.customer;
   const { rate, count } = rating;
   return (
-    <div className=" col-md-4 cards my-4">
-      <div>
+    <div className=" col-md-4 my-4 bg-info">
+      <div data-aos="flip-left"
+      data-aos-easing="linear"
+      data-aos-duration="1500" className="m-2 bg-success rounded-3">
         <h2>Name: {title.slice(0, 10)}</h2>
         <img className="w-50 img-fluid" src={image} alt="" />
         <div>
@@ -24,7 +25,7 @@ const User = (props) => {
         </p>
         <div className="row py-5">
           <div className="col-md-6">
-            <ReactModal details = {props.customer}></ReactModal>
+            <ReactModal details={props.customer}></ReactModal>
           </div>
           <div className="col-md-6">
             <button className="btn btn-info" onClick={SetCounter}>
